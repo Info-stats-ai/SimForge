@@ -79,11 +79,6 @@ class MockSimulationProvider(SimulationProvider):
         with open(f"{work_dir}/labels.json", "w") as f:
             json.dump(labels, f, indent=2)
 
-        # Generate mock video artifact
-        # In a real environment, Isaac Sim would render the RGB frames to an MP4 video here.
-        with open(f"{work_dir}/render_output.mp4", "wb") as f:
-            f.write(b"MOCK_VIDEO_DATA_STREAM")
-
         # Generate log
         log_lines = [
             f"[{datetime.utcnow().isoformat()}] MockSimulation started for job {job_id}",
@@ -124,6 +119,4 @@ class MockSimulationProvider(SimulationProvider):
             return "log_file"
         elif filename.endswith((".png", ".jpg")):
             return "preview_image"
-        elif filename.endswith(".mp4"):
-            return "preview_video"
         return "log_file"

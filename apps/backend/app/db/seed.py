@@ -171,7 +171,6 @@ def seed_database():
         for j in completed_jobs:
             for atype, fname in [
                 ("preview_image", f"preview_{j.id[:8]}.png"),
-                ("preview_video", f"render_{j.id[:8]}.mp4"),
                 ("manifest_json", f"manifest_{j.id[:8]}.json"),
                 ("labels_json", f"labels_{j.id[:8]}.json"),
                 ("evaluation_json", f"eval_{j.id[:8]}.json"),
