@@ -41,6 +41,13 @@ yarn-error.log*
 *.swp
 *.swo
 
+# Environment files with secrets
+.env
+apps/backend/.env
+apps/dashboard/.env
+apps/frontend/.env
+*.env.local
+
 # Project specific
 backend.log
 frontend.log
