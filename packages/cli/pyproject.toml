@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simforge-cli"
+version = "0.1.0"
+description = "SimForge CLI"
+requires-python = ">=3.11"
+dependencies = [
+    "simforge>=0.1.0",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+simforge = "simforge_cli:main"
